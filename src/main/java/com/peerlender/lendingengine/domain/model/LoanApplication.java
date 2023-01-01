@@ -13,8 +13,8 @@ public final class LoanApplication {
 //    @Column ( name = "id", nullable = false )
     private Long id;
     
-    private  int      amount;
-    //    final because its value cannot be changed through out bean creation lifecycle
+    private  int amount;
+    //    final because its value cannot be changed throughout bean creation lifecycle
     @ManyToOne
 //    @JoinColumn ( name = "borrower_id" )
     private  User     borrower;
