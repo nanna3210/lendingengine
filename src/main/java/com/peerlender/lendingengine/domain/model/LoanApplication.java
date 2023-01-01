@@ -1,19 +1,37 @@
 package com.peerlender.lendingengine.domain.model;
 
+import jakarta.persistence.*;
+
 import java.time.Duration;
 import java.util.Objects;
 
-public class LoanRequest {
+@Entity
+public final class LoanApplication {
+    
+    @Id
+    @GeneratedValue ( strategy = GenerationType.SEQUENCE )
+//    @Column ( name = "id", nullable = false )
+    private Long id;
+    
+    private  int      amount;
+    //    final because its value cannot be changed through out bean creation lifecycle
+    @ManyToOne
+//    @JoinColumn ( name = "borrower_id" )
+    private  User     borrower;
+    private  Duration paymentTerm;
+    private  double   interestrate;
+    
+    public LoanApplication ( ) {
+    }
     
     
-    private final int amount;
-//    final because its value cannot be changed through out bean creation lifecycle
-    private final User borrower;
-    private final Duration paymentTerm;
-    private final double interestrate;
+    public Long getId ( ) {
+        return id;
+    }
     
+   
     
-    public LoanRequest ( int amount , User borrower , Duration paymentTerm , double interestrate ) {
+    public LoanApplication ( int amount , User borrower , Duration paymentTerm , double interestrate ) {
         this.amount       = amount;
         this.borrower     = borrower;
         this.paymentTerm  = paymentTerm;
@@ -42,7 +60,7 @@ public class LoanRequest {
             return true;
         if ( o == null || getClass () != o.getClass () )
             return false;
-        LoanRequest that = ( LoanRequest ) o;
+        LoanApplication that = ( LoanApplication ) o;
         return amount == that.amount && Double.compare ( that.interestrate , interestrate ) == 0 && Objects.equals ( borrower , that.borrower ) && Objects.equals ( paymentTerm , that.paymentTerm );
     }
     

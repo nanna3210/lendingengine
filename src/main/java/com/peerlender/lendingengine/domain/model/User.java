@@ -1,15 +1,35 @@
 package com.peerlender.lendingengine.domain.model;
 
-import java.util.Objects;
+import jakarta.persistence.*;
 
+import java.util.Objects;
+@Entity
 public final class User {
     
-    private final String firstName;
-    private final String lastName;
-    private final int age;
-    private final String occupation;
+    @Id
+    @GeneratedValue ( strategy = GenerationType.SEQUENCE )
+//    @Column ( name = "id", nullable = false )
+    private Long id;
     
-    public User ( String firstName , String lastName , int age , String occupation ) {
+    private  String firstName;
+    private  String lastName;
+    private  int    age;
+    private  String occupation;
+    
+    public User ( ) {
+    }
+    
+    
+    public Long getId ( ) {
+        return id;
+    }
+    
+    public void setId ( Long id ) {
+        this.id = id;
+    }
+    
+    public User ( long id , String firstName , String lastName , int age , String occupation ) {
+        this.id = id;
         this.firstName  = firstName;
         this.lastName   = lastName;
         this.age        = age;
