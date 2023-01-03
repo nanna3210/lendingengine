@@ -18,7 +18,9 @@ public class LoanController {
     
     
     private final LoanRepository loanRepository;
+    
     private final UserRepository userRepository;
+    
     
     @Autowired
     public LoanController ( LoanRepository loanRepository , UserRepository userRepository ) {
@@ -28,9 +30,9 @@ public class LoanController {
     
     
     @PostMapping(value = "loan/request")
-        public void requestLoan(@RequestBody  final LoanRequest loanRequest ) {
+        public void requestLoan(@RequestBody   LoanRequest loanRequest ) {
             System.out.println ( loanRequest );
-//            request body to convert the body of request to loanrequest object
+//            request body to convert the body of request to loan request object
         }
         
         @GetMapping(value = "/users")

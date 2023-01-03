@@ -9,7 +9,7 @@ import java.util.Objects;
 public final class LoanApplication {
     
     @Id
-    @GeneratedValue ( strategy = GenerationType.SEQUENCE )
+//    @GeneratedValue ( strategy = GenerationType.SEQUENCE )
 //    @Column ( name = "id", nullable = false )
     private Long id;
     
@@ -19,7 +19,7 @@ public final class LoanApplication {
 //    @JoinColumn ( name = "borrower_id" )
     private  User     borrower;
     private  Duration paymentTerm;
-    private  double   interestrate;
+    private  double   interestRate;
     
     public LoanApplication ( ) {
     }
@@ -31,11 +31,11 @@ public final class LoanApplication {
     
    
     
-    public LoanApplication ( int amount , User borrower , Duration paymentTerm , double interestrate ) {
+    public LoanApplication ( int amount , User borrower , Duration paymentTerm , double interestRate ) {
         this.amount       = amount;
         this.borrower     = borrower;
         this.paymentTerm  = paymentTerm;
-        this.interestrate = interestrate;
+        this.interestRate = interestRate;
     }
     
     public int getAmount ( ) {
@@ -51,7 +51,7 @@ public final class LoanApplication {
     }
     
     public double getInterestrate ( ) {
-        return interestrate;
+        return interestRate;
     }
     
     @Override
@@ -61,17 +61,17 @@ public final class LoanApplication {
         if ( o == null || getClass () != o.getClass () )
             return false;
         LoanApplication that = ( LoanApplication ) o;
-        return amount == that.amount && Double.compare ( that.interestrate , interestrate ) == 0 && Objects.equals ( borrower , that.borrower ) && Objects.equals ( paymentTerm , that.paymentTerm );
+        return amount == that.amount && Double.compare ( that.interestRate , interestRate ) == 0 && Objects.equals ( borrower , that.borrower ) && Objects.equals ( paymentTerm , that.paymentTerm );
     }
     
     @Override
     public int hashCode ( ) {
-        return Objects.hash ( amount , borrower , paymentTerm , interestrate );
+        return Objects.hash ( amount , borrower , paymentTerm , interestRate );
     }
     
     @Override
     public String toString ( ) {
-        return "LoanRequest{" + "amount=" + amount + ", borrower=" + borrower + ", paymentTerm=" + paymentTerm + ", interestrate=" + interestrate + '}';
+        return "LoanRequest{" + "amount=" + amount + ", borrower=" + borrower + ", paymentTerm=" + paymentTerm + ", interestrate=" + interestRate + '}';
     }
 }
 

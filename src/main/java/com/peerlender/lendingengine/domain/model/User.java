@@ -3,11 +3,13 @@ package com.peerlender.lendingengine.domain.model;
 import jakarta.persistence.*;
 
 import java.util.Objects;
+
+//entity annotation for pojo
 @Entity
 public final class User {
     
     @Id
-    @GeneratedValue ( strategy = GenerationType.SEQUENCE )
+//    @GeneratedValue ( strategy = GenerationType.SEQUENCE )
 //    @Column ( name = "id", nullable = false )
     private Long id;
     
