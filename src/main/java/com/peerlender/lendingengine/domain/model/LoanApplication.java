@@ -9,14 +9,14 @@ import java.util.Objects;
 public final class LoanApplication {
     
     @Id
-//    @GeneratedValue ( strategy = GenerationType.SEQUENCE )
+    @GeneratedValue ( strategy = GenerationType.AUTO )
 //    @Column ( name = "id", nullable = false )
     private Long id;
     
     private  int amount;
     //    final because its value cannot be changed throughout bean creation lifecycle
     @ManyToOne
-//    @JoinColumn ( name = "borrower_id" )
+    @JoinColumn ( name = "borrower_id" )
     private  User     borrower;
     private  Duration paymentTerm;
     private  double   interestRate;
