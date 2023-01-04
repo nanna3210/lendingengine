@@ -2,6 +2,8 @@ package com.peerlender.lendingengine.application.model;
 
 import java.util.Objects;
 
+//loan request ! class
+
 public class LoanRequest {
     
     
