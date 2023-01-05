@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class LendingengineApplication implements CommandLineRunner {
-	
+//	main class
 	@Autowired
 	private UserRepository userRepository;
 	
