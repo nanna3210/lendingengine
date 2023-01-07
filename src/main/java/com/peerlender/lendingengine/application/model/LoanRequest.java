@@ -13,6 +13,8 @@ public class LoanRequest {
     private final int    daysToRepay;
     private final double interestRate;
     
+//    method For LOAN REQUEST
+    
     public LoanRequest ( int amount , int borrowerId , int daysToRepay , double interestRate ) {
         this.amount       = amount;
         this.borrowerId   = borrowerId;
