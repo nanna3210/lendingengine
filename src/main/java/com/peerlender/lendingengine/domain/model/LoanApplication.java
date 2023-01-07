@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.Duration;
 import java.util.Objects;
-
+//Loan Application class
 @Entity
 public final class LoanApplication {
     
