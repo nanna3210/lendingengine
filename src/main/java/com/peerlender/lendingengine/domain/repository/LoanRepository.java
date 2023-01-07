@@ -9,3 +9,4 @@ public interface LoanRepository extends JpaRepository< LoanApplication, Long > {
 //jPA repository implementing saving update delete find method
 
 }
+//jpa repository from spring data JPA
