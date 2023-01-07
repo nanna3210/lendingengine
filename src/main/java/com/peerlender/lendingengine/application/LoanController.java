@@ -16,12 +16,12 @@ import java.util.List;
 @RestController
 public class LoanController {
     
-    
+//
     private final LoanRepository loanRepository;
     
     private final UserRepository userRepository;
     
-    
+//    dependency injection
     @Autowired
     public LoanController ( LoanRepository loanRepository , UserRepository userRepository ) {
         this.loanRepository = loanRepository;
