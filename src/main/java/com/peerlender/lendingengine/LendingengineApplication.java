@@ -19,7 +19,7 @@ public class LendingengineApplication implements CommandLineRunner {
 	
 	@Override
 	public void run ( String... args ) throws Exception {
-//		creatting bootstrap data
+//		creating bootstrap data
 //		repository saving data
 		userRepository.save ( new User ( 1 , "Nanna" , "Dash" , 30 , "Software developer" ) );
 		userRepository.save ( new User ( 2 , "bapu" , "premanand" , 32 , "social worker" ) );
