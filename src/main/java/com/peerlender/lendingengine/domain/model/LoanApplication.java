@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.time.Duration;
 import java.util.Objects;
 //Loan Application class
+//entity annotation
 @Entity
 public final class LoanApplication {
     
